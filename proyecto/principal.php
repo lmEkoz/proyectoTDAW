@@ -1,98 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=divice-width, initial-scale=1.0"/>
-			<title>Pagina Principal</title>
-	</head>
-	<style>
-	*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-body{
-	width: 100%;
-	height: 100vh;
-	background: #2f0202;
-	background: radial-gradient(ellipse at center, #5b720e 0%, #000000);
-	background-size: 100%;
-}
-p{
-	margin: 0;
-	padding: 0;
-}
-.reloj{
-	font-family: 'share tech mono', monospace;
-	color: #ffffff;
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	text-shadow: 0 0 20px rgb(230, 171, 10),0 0 20px rgb(255,255,22);
-}
-.fecha{
-	letter-spacing: 0.1em;
-	font-size: 24px;
-	text-align: right;
-	
-}
-.tiempo{
-	letter-spacing: 0.1em;
-	font-size: 24px;
-	
-	text-align: right;
-}
-
-.bienvenida{
-	letter-spacing: 0.1em;
-	font-size: 70px;
-}
-.vinculos{
-	letter-spacing: 0.1em;
-	font-size: 30px;
-	text-align: left;
-}
-	</style>
-	<body>
-	<div class="reloj">
-	    <p class="bienvenida"> Bienvenidos al Curso de Circuitos Electricos</p>
-		<br><br><br><br>
-		<p class="vinculos"><a href="agregar_alumno.php">Agregar Alumno</a></p>
-		<p class="vinculos"><a href="login.php">Iniciar Sesion</a></p>
-		<br><br><br><br>
-		<p class="fecha"></p>
-		<p class="tiempo"></p>
-		
-	</div>
-	</body>
-	<script>
-const $tiempo=document.querySelector('.tiempo'),
-$fecha= document.querySelector('.fecha');
-
-function Relojdigital(){
-    let f=new Date(),
-    dia= f.getDate(),
-    mes= f.getMonth()+1,
-    anio= f.getFullYear(),
-    diaSemana=f.getDay();
-
-    dia= ('0'+dia).slice(-2);
-    mes=('0'+mes).slice(-2)
-
-    let timeString= f.toLocaleTimeString();
-    $tiempo.innerHTML=timeString;
-
-    let semana=['DOMINGO','LUNES','MARTES','MIERCOLES','JUEVES','VIERNES','SABADO'];
-    let showSemana= (semana[diaSemana])
-    $fecha.innerHTML = `${showSemana} ${dia}-${mes}-${anio}`
-}
-setInterval(() =>{
-    Relojdigital()
-},1000);
-	
-	
-	</script>
+<html lang="es">
+<head>
+	<!--Principio de meta-->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="author" content="Veruete Hernandez Bryan David"/>
+		<meta name="author" content="Alcantara Sanchez Francisco"/>
+		<meta name="author" content="Castro Macías Julio César"/>
+		<meta name="keywords" content="html, css, maquetado"/>
+		<meta name="copyright" content="VHBD"/>
+		<meta name="description" content="ejercicios de maquetado"/>
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<!--Fin de meta-->
+</head>
+<!--Inicio de CSS-->
+<style>
+	.logo{
+		height: 80px;
+		width: 200px;
+		border-radius: 1em;
+		background-color: #000000;
+		color: #FFFFFF;
+		text-align:center;
+		font-size: 30px;
+	}
+	.curso{
+		height: 80px;
+		width: 2170px;
+		margin-top:-80px;
+		margin-left: 200px;
+		border-radius: 1em;
+		background-color: #0000FF;
+		color: #FFFFFF;
+		text-align:center;
+		font-size: 50px;
+	}
+	.Botones{
+		height: 100px;
+		width: 2367px;
+		margin-top:5px;
+		border-radius: 1em;
+		background-color: #000000;
+		color: #FFFFFF;
+		text-align: center;
+	}
+	.Principal{
+		height: 900px;
+		width: 1670px;
+		margin-top: 5px;
+		border-radius: 1em;
+		text-align: center;
+		background-color: #A4A4A4;
+	}
+	.Inicio{
+		height: 900px;
+		width: 690px;
+		margin-top: -900px;
+		margin-left: 1680px;
+		border-radius: 1em;
+		text-align: center;
+		background-color: #04d9ff;
+		font-size: 30px;
+	}
+	.Info{
+		height: 95px;
+		width: 2376px;
+		border-radius: 1em;
+		background-color: #000000;
+		margin-top: 5px;
+	}
+	<!--botones-->
+	.primero{
+		height: 65px;
+		width: 80px;
+		text-align: center;
+		margin-right: 150px;
+		margin-left: -2000px;
+		margin-top: 20px;
+	}
+	<!--Info-->
+	.Info{
+		border-radius: 1em;
+		color: #FFFFFF;
+		text-align:center;
+		font-size: 30px;
+	}
+	.uno{
+		background-color: #FFFFFF;
+	}
+	.dos{
+		background-color: #FFFFFF;
+	}
+	.tres{
+		background-color: #FFFFFF;
+	}
+</style>
+<!--Fin de CSS-->
+<body>
+	<!--primer div-->
+		<div class="logo">ESCOM IPN</div>	<!--este div es el logo de la pagina-->
+	<!--segundo div-->
+		<div class="curso">Curso de electronica analogica y circuitos</div>		<!--tipo de curso-->
+	<!--tercer div-->
+		<div class="Botones">
+			<button type="send" class="primero">Principal</button>
+			<button type="send" class="segundob">Acerca de</button>
+			<button type="send" class="tercero">Preguntas Frecuentes</button>
+			<button type="send" class="cuartob">Contacto</button>
+			<button type="send" class="quintob">Ayuda</button>
+		</div>		
+	<!--botones de navegacion-->
+	<!--cuarto div-->
+		<div class="Principal">Principal
+			<p>En este sitio web podrás encontrar un curso de fundamentos de circuitos</p>
+			<p>y de electronica analogica que incluyen actividades como rompecabezas,</p>
+			<p>memorama, libros, videos y carrusel de imagenes lo cual va a veneficiar</p>
+			<p>al alumno en poder aprender de forma más rapida y censilla.</p>
+		</div>		<!--presentacion de la web-->
+	<!--quinto div-->
+		<div class="Inicio">Inicio de seción
+			<p>Usuario:</p> <input type="text" height="50px;">
+			<p>contrase&ntilde;a:</p> <input type="password" height="50px;">
+			<br><br>
+				<select name="tipo" id="tipo">
+					<option value="Alumno">Alumno</option>
+					<option value="Profesor">Profesor</option>
+					<option value="Administrador">Administrador</option>
+					<option value="Coordinador">Coordinador</option>
+				</select>
+			<button type="send">Entrar</button>
+		</div>		
+	<!--inicio de secion y tipo de usuario-->
+	<!--sexto div-->
+		<div class="Info">
+			<p class="uno">copyright @Veruete Hernandez Bryan David</p>
+			<p class="dos">copyright @Alcantara Sanchez Francisco</p>
+			<p class="tres">copyright @Castro Macías Julio César</p>
+		</div>		<!--info-->
+</body>
 </html>
