@@ -18,7 +18,7 @@
 		height: 80px;
 		width: 20%;
 		border-radius: 1em;
-		background-color: black;
+		background-color: #000000;
 		color: #FFFFFF;
 		text-align:center;
 		font-size: 30px;
@@ -281,13 +281,17 @@
 	<!--cuarto div-->
 		<div class="content">
 			<div class="Principal">Principal
-				<p>En este sitio web podrás encontrar un curso de fundamentos de circuitos
-				<br>
-				y de electronica analogica que incluyen actividades como rompecabezas,
-				<br>
-				memorama, libros, videos y carrusel de imagenes lo cual va a beneficiar
-				<br>
-				al alumno en poder aprender de forma más rapida y sencilla.</p>
+				<p> 1.Instalar XAMPP:</p>
+                <p>       xampp-windows-x64-8.0.30-0-VS16-installer.exe</p>
+                <p> 2.La carpeta que se llama 'escom' debera de ir pegado en la siguiente rura:</p>
+                <p>    C:\{ruta_a_xampp}\xampp\mysql\data</p>
+                <p> esta carpeta contiene la base de datos </p>
+                <p> 3.Copiar la carpeta 'proyecto' en la siguiente ruta:</p>
+                <p>    C:{ruta_a_xampp}xampp\htdocs</p>
+                <p> 4.Abrir el XAMPP y tenemos que encender los servicios de Apache y Mysql </p>
+                <p> 5. Abrir el navegador y si todos los pasos fueron bien ejecutados tenemos que ingresar a la siguiente direccion:</p>
+                <p>    localhost/proyecto/principal.php</p>
+</p>
 			</div>		<!--presentacion de la web-->
 		<!--quinto div-->
 			<div class="Inicio">
@@ -321,3 +325,8 @@
 	?>
 </body>
 </html>
+```
+
+
+
+```

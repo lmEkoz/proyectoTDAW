@@ -18,7 +18,7 @@
 		height: 80px;
 		width: 20%;
 		border-radius: 1em;
-		background-color: black;
+		background-color: #000000;
 		color: #FFFFFF;
 		text-align:center;
 		font-size: 30px;
@@ -192,6 +192,31 @@
 <!--Fin de CSS-->
 <body>
 <?php
+    if(isset($_POST['help'])){
+        include("conexion.php");
+
+        $nombre=$_POST['nombre_form'];
+        $correo=$_POST['correo_form'];
+        $asunto=$_POST['asunto'];
+        $tipo=$_POST['tipo_user'];
+        $mensaje=$_POST['mensaje_form'];
+
+        $sql="INSERT INTO ayuda(nombre,correo,asunto,tipo,mensaje) VALUES('".$nombre."','".$correo."','".$asunto."','".$tipo."','".$mensaje."')";
+        $resp=mysqli_query($conexion,$sql);
+
+        if($resp){
+            echo "  <script language='JavaScript'>
+                        alert('Se inserto correctamente');
+                        location.href='';
+                    </script>";
+        }else{
+            echo "  <script language='JavaScript'>
+                        alert('No se inserto correctamente');
+                        location.href='';
+                    </script>";
+        }
+    }
+
     if(isset($_POST['enviar'])){  
     
 		if(empty($_POST['boleta'])||empty($_POST['password'])){
@@ -213,7 +238,7 @@
 				if($row=mysqli_fetch_assoc($resp)){
 					echo "  <script language='JavaScript'>
 							alert('Se inserto correctamente');
-							location.href='admin.php';
+							location.href='';
 							</script>";
 				}else{
 					echo "  <script language='JavaScript'>
@@ -270,24 +295,32 @@
 			<!--tercer div-->
 		</div>
 		<div class="Botones">
-			<a href="contenido.php"><button type="send" class="cero">Curso</button></a>
+            <a href="contenido.php"><button type="send" class="cero">Curso</button></a>
 			<a href="principal.php"><button type="send" class="primero">Principal</button></a>
 			<a href="acerca_de.php"><button type="send" class="segundo">Acerca de</button></a>
 			<a href="faq.php"><button type="send" class="tercero">Preguntas Frecuentes</button></a>
-			<a href="contacto.php"><button type="send" class="cuarto">Contacto</button></a>
-			<a href="help.php"><button type="send" class="quinto">Ayuda</button></a>
+			<a href="contacto.php"><button type="send" class="cuarto">Contacto</button>
+			<a href="help.php"><button type="send" class="quinto">Ayuda</button>
 		</div>		
 	<!--botones de navegacion-->
 	<!--cuarto div-->
 		<div class="content">
-			<div class="Principal">Principal
-				<p>En este sitio web podrás encontrar un curso de fundamentos de circuitos
-				<br>
-				y de electronica analogica que incluyen actividades como rompecabezas,
-				<br>
-				memorama, libros, videos y carrusel de imagenes lo cual va a beneficiar
-				<br>
-				al alumno en poder aprender de forma más rapida y sencilla.</p>
+			<div class="Principal">
+            <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+                <label for="nombre_form">Nombre</label>
+                <input type="text" name="nombre_form" id="nombre_form" placeholder="Nombre" required>
+                <label for="correo_form">Correo</label>
+                <input type="email" name="correo_form" id="correo_form" placeholder="Correo" required>
+                <br>
+                <label for="asunto">Asunto</label>
+                <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
+                <label for="tipo_user">Tipo de Usuario</label>
+                <input type="number" name="tipo_user" id="tipo_user" placeholder="Tipo de Usuario" required>
+                <br>
+                <label for="mensaje_form">Mensaje</label>
+                <textarea style="resize: none; height:200px; width:200px;" name="mensaje_form" id="mensaje_form" placeholder="Mensaje" required></textarea>
+                <input type="submit" name="help" value="Enviar">
+            </form>
 			</div>		<!--presentacion de la web-->
 		<!--quinto div-->
 			<div class="Inicio">

@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <h1>AGREGAR ALUMNO</h1>
+    <h1>AGREGAR PROFESOR</h1>
     <?php
         if(isset($_POST['enviar'])){
             $nombre=$_POST['nombre'];
@@ -32,7 +32,7 @@
             $pass=$_POST['password'];
 
             include("conexion.php");
-            $sql="INSERT INTO alumnos(nombre,boleta,correo,pass,tipo) VALUES('$nombre','$boleta','$correo','$pass',2)";
+            $sql="INSERT INTO profesores(nombre,boleta,correo,pass,tipo) VALUES('$nombre','$boleta','$correo','$pass',1)";
 
             $resp=mysqli_query($conexion,$sql);
 
@@ -71,7 +71,7 @@
         <br><br>
 
         <input type="submit" name="enviar" value="AGREGAR">
-        <a href="index.php">Regresar</a>
+        <a href="admin.php">Regresar</a>
     </form>
 
     <?php

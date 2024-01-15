@@ -18,7 +18,7 @@
 		height: 80px;
 		width: 20%;
 		border-radius: 1em;
-		background-color: black;
+		background-color: #000000;
 		color: #FFFFFF;
 		text-align:center;
 		font-size: 30px;
@@ -270,7 +270,7 @@
 			<!--tercer div-->
 		</div>
 		<div class="Botones">
-			<a href="contenido.php"><button type="send" class="cero">Curso</button></a>
+            <a href="contenido.php"><button type="send" class="cero">Curso</button></a>
 			<a href="principal.php"><button type="send" class="primero">Principal</button></a>
 			<a href="acerca_de.php"><button type="send" class="segundo">Acerca de</button></a>
 			<a href="faq.php"><button type="send" class="tercero">Preguntas Frecuentes</button></a>
@@ -280,14 +280,16 @@
 	<!--botones de navegacion-->
 	<!--cuarto div-->
 		<div class="content">
-			<div class="Principal">Principal
-				<p>En este sitio web podrás encontrar un curso de fundamentos de circuitos
+			<div class="Principal">Acerca De
+                <br>
+				<p>Este sitio fue desarrollado por alumnos de la Escuela Superior de Cómputo
 				<br>
-				y de electronica analogica que incluyen actividades como rompecabezas,
+                <br>
+				Castro Macias Julio Cesar 
 				<br>
-				memorama, libros, videos y carrusel de imagenes lo cual va a beneficiar
+				Bryan David Veruete Hernandez
 				<br>
-				al alumno en poder aprender de forma más rapida y sencilla.</p>
+				Fransisco Alcantara Sanchez</p>
 			</div>		<!--presentacion de la web-->
 		<!--quinto div-->
 			<div class="Inicio">

@@ -1,0 +1,18 @@
+JC_a_Bryan_Veruete{
+    calificacion: 9
+    comentarios: Excelente manejo de Front-End, algunos detalles faltan para Back-End
+}
+JC_a_Julio_Castro{
+    calificacion: 8
+    comentarios: Buen uso de Back-End, uso medio de Front-End
+}
+
+BV_a_Julio_Castro{
+    calificacion: 9
+    comentarios: exelente manejo de estandar de codigo y logica de programacion con JS
+}
+
+BV_a_Bryan_Veruete{
+    calificacion: 9
+    comentarios: con detalles de Back-End e identacion de codigo
+}

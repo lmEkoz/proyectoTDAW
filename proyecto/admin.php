@@ -25,23 +25,25 @@
 <?php
     
     include("conexion.php");
-    $sql="SELECT * FROM alumnos";
+    $sql="SELECT * FROM ayuda";
     $result=mysqli_query($conexion,$sql);
 ?>
 
-    <a href="agregar_alumno.php">Registrar Alumno</a>
     <br><br>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>NOMBRE</th>
-                <th>BOLETA</th>
                 <th>CORREO</th>
-                <th>ACTIONS</th>
+                <th>ASUNTO</th>
+                <th>TIPO</th>
+                <th>MENSAJE</th>
             </tr>
         </thead>
         <tbody>
+            <a href="agregar_alumno.php">Agregar Alumno</a><br>
+            <a href="agregar_profesor.php">Agregar Profesor</a>
             <?php
                 while($rows=mysqli_fetch_assoc($result)){
 
@@ -49,12 +51,12 @@
             <tr>
                 <td> <?php  echo $rows['id']        ?> </td>
                 <td> <?php  echo $rows['nombre']    ?> </td>
-                <td> <?php  echo $rows['boleta']    ?></td>
                 <td> <?php  echo $rows['correo']    ?></td>
+                <td> <?php  echo $rows['asunto']    ?></td>
+                <td> <?php  echo $rows['tipo']    ?></td>
+                <td> <?php  echo $rows['mensaje']    ?></td>
                 <td>
-                    <?php   echo "<a href='editar.php?id=".$rows['id']."'>EDITAR</a>"; ?>
-                    -
-                    <?php   echo "<a href='eliminar.php?id=".$rows['id']."' onclick='return confirmar()'>ELIMIAR </a>"; ?>
+                    <?php   echo "<a href='eliminar_profesor.php?id=".$rows['id']."' onclick='return confirmar()'>ELIMIAR </a>"; ?>
                 </td>
             </tr>
         </tbody>

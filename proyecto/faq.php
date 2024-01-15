@@ -18,7 +18,7 @@
 		height: 80px;
 		width: 20%;
 		border-radius: 1em;
-		background-color: black;
+		background-color: #000000;
 		color: #FFFFFF;
 		text-align:center;
 		font-size: 30px;
@@ -280,14 +280,19 @@
 	<!--botones de navegacion-->
 	<!--cuarto div-->
 		<div class="content">
-			<div class="Principal">Principal
-				<p>En este sitio web podrás encontrar un curso de fundamentos de circuitos
-				<br>
-				y de electronica analogica que incluyen actividades como rompecabezas,
-				<br>
-				memorama, libros, videos y carrusel de imagenes lo cual va a beneficiar
-				<br>
-				al alumno en poder aprender de forma más rapida y sencilla.</p>
+			<div class="Principal">FAQ
+                <br>
+				<p>1.-¿Como puedo acceder a la pagina?</p>
+                <p>Para acceder a la pagina es necesario que te registres como alumno, profesor o administrador</p>
+                <br>
+                <p>2.-¿Como puedo registrarme?</p>
+                <p>Para registrarte como alumno es necesario que ingreses tu boleta y contraseña, para profesor es necesario que ingreses tu boleta y contraseña, para administrador es necesario que ingreses tu boleta y contraseña</p>
+                <br>
+                <p>3.-¿Como puedo acceder a los cursos?</p>
+                <p>Para acceder a los cursos es necesario que te registres como alumno, profesor o administrador</p>
+                <br>
+				
+            </p>
 			</div>		<!--presentacion de la web-->
 		<!--quinto div-->
 			<div class="Inicio">
