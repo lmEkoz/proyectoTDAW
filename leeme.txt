@@ -1,0 +1,11 @@
+1.Instalar XAMPP:
+	xampp-windows-x64-8.0.30-0-VS16-installer.exe
+2.La carpeta que se llama 'escom' debera de ir pegado en la siguiente rura:
+	C:\{ruta_a_xampp}\xampp\mysql\data
+esta carpeta contiene la base de datos 
+3.Copiar la carpeta 'proyecto' en la siguiente ruta:
+	C:{ruta_a_xampp}xampp\htdocs
+4.Abrir el XAMPP y tenemos que encender los servicios de Apache y Mysql 
+5. Abrir el navegador y si todos los pasos fueron bien ejecutados tenemos que ingresar a la siguiente direccion:
+	localhost/proyecto/principal.php
+
